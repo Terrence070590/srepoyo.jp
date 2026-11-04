@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#172c46">
+<meta name="description" content="Teaching portfolio of Shane Repoyo — English language educator in Kobe, Japan.">
+<title>Shane Repoyo | Teaching Portfolio</title>
+<style>
+:root {
+  --navy:#172c46; --blue:#315b80; --teal:#9bd4c7; --cream:#f7f5ef;
+  --paper:#ffffff; --ink:#1d2936; --muted:#657180; --line:#dfe5e8;
+  --accent:#d6a85f; --radius:22px; --shadow:0 18px 50px rgba(23,44,70,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+a{color:inherit}
+.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(247,245,239,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(223,229,232,.85)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:74px}
+.brand{font-weight:850;letter-spacing:-.04em;color:var(--navy);font-size:1.08rem;text-decoration:none}
+.brand span{color:var(--blue)}
+nav{display:flex;gap:24px;align-items:center}
+nav a{text-decoration:none;font-size:.9rem;font-weight:650;color:#435266}
+nav a:hover{color:var(--blue)}
+.menu{display:none;background:var(--navy);color:white;border:0;border-radius:12px;padding:10px 13px;font-weight:700}
+.hero{padding:78px 0 64px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:54px}
+.kicker{display:inline-flex;align-items:center;gap:10px;color:var(--blue);font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.kicker:before{content:"";width:28px;height:2px;background:var(--accent)}
+h1,h2,h3,p{margin-top:0}
+h1{font-size:clamp(3rem,6vw,5.3rem);line-height:.98;letter-spacing:-.065em;color:var(--navy);margin:20px 0 24px}
+h1 em{font-family:Georgia,serif;font-weight:500;color:var(--blue)}
+.lede{max-width:630px;color:#536173;font-size:1.12rem;line-height:1.85}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:13px 20px;border-radius:999px;text-decoration:none;font-weight:750;border:1px solid var(--navy);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(23,44,70,.12)}
+.btn.primary{background:var(--navy);color:#fff}
+.btn.secondary{color:var(--navy);background:transparent}
+.hero-art{position:relative;min-height:410px;display:grid;place-items:center}
+.art-back{position:absolute;width:310px;height:350px;border-radius:48% 48% 24px 24px;background:var(--teal);transform:rotate(7deg)}
+.art-card{position:relative;width:min(330px,100%);background:var(--paper);border-radius:28px;padding:30px;box-shadow:var(--shadow);transform:rotate(-3deg)}
+.art-icon{width:100%;height:188px;border-radius:18px;background:linear-gradient(145deg,#d9eee7,#f7e6c9);display:grid;place-items:center;overflow:hidden}
+.art-icon svg{width:175px;height:175px}
+.art-card .small{font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--blue);margin:22px 0 6px}
+.art-card h3{font-size:1.5rem;line-height:1.2;color:var(--navy);margin-bottom:10px}
+.art-card p{font-size:.92rem;color:var(--muted);margin:0}
+.float-note{position:absolute;bottom:25px;right:-4px;background:var(--navy);color:white;padding:13px 18px;border-radius:15px;box-shadow:var(--shadow);font-weight:700;font-size:.88rem}
+.metrics{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+.metric-grid{display:grid;grid-template-columns:repeat(3,1fr);padding:24px 0}
+.metric{padding:0 28px;border-right:1px solid var(--line)}
+.metric:first-child{padding-left:0}.metric:last-child{border:0}
+.metric strong{display:block;color:var(--navy);font-size:1.08rem}
+.metric span{font-size:.86rem;color:var(--muted)}
+section{padding:86px 0}
+.section-head{max-width:700px;margin-bottom:36px}
+.eyebrow{font-size:.76rem;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);font-weight:850;margin-bottom:10px}
+h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.08;letter-spacing:-.05em;color:var(--navy);margin-bottom:16px}
+.section-intro{color:var(--muted);font-size:1.04rem;max-width:650px}
+.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+.quote{padding:30px;background:var(--navy);color:white;border-radius:var(--radius);font-family:Georgia,serif;font-size:1.55rem;line-height:1.45;position:relative}
+.quote:after{content:"“";position:absolute;top:-25px;right:20px;font-size:7rem;color:rgba(155,212,199,.45);line-height:1}
+.quote small{display:block;font:700 .75rem system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-top:22px}
+.about-copy p{color:#536173}
+.pill-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+.pill{background:#e7eeec;color:#294c5b;border:1px solid #d6e5e0;border-radius:999px;padding:7px 12px;font-size:.82rem;font-weight:700}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:27px;box-shadow:0 8px 25px rgba(23,44,70,.035)}
+.card-number{font-size:.8rem;font-weight:850;color:#b28743;letter-spacing:.12em}
+.card h3{color:var(--navy);font-size:1.18rem;margin:14px 0 10px}
+.card p{color:var(--muted);font-size:.94rem;margin:0}
+.experience{background:#eef1ee}
+.timeline{display:grid;gap:16px}
+.job{display:grid;grid-template-columns:180px 1fr;gap:30px;padding:27px;background:white;border:1px solid var(--line);border-radius:18px}
+.job-date{font-size:.83rem;color:var(--blue);font-weight:800}
+.job h3{margin:0 0 4px;color:var(--navy)}
+.job .org{font-weight:700;color:#647080;font-size:.91rem;margin-bottom:12px}
+.job p{margin:0;color:var(--muted);font-size:.95rem}
+.job ul{margin:10px 0 0;padding-left:20px;color:var(--muted);font-size:.93rem}
+.sample-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.lesson{background:white;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.lesson-top{padding:23px 26px;background:#dceee8}
+.lesson-top.alt{background:#f5e7cc}
+.lesson-top .label{font-size:.75rem;font-weight:850;letter-spacing:.13em;text-transform:uppercase;color:#315b80}
+.lesson-top h3{font-size:1.35rem;color:var(--navy);margin:8px 0 0}
+.lesson-body{padding:26px}
+.lesson-body p,.lesson-body li{color:var(--muted);font-size:.94rem}
+.lesson-body ul{padding-left:20px}
+.worksheet{margin-top:15px;padding:17px;border:1px dashed #a9bac4;border-radius:15px;background:#fbfcfa}
+.word-row{display:flex;gap:9px;flex-wrap:wrap;margin:10px 0 14px}
+.word{background:#eef1f7;border-radius:10px;padding:8px 14px;color:var(--navy);font-weight:850;font-size:1.1rem}
+.blank{display:inline-block;border-bottom:2px solid #8b9bab;min-width:72px;height:22px}
+.notice{font-size:.8rem;color:#7a6a4e;background:#fbf3e4;padding:12px 14px;border-radius:12px;margin-top:18px}
+.education-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.edu{background:white;border:1px solid var(--line);border-radius:18px;padding:24px}
+.edu h3{color:var(--navy);margin:8px 0}
+.edu p{color:var(--muted);margin:0;font-size:.94rem}
+.contact{background:var(--navy);color:white}
+.contact h2{color:white}
+.contact .section-intro{color:#c6d1dc}
+.contact-panel{display:flex;justify-content:space-between;align-items:center;gap:30px;border-top:1px solid #42556c;margin-top:34px;padding-top:28px}
+.contact-panel p{margin:0;color:#d0dbe5}
+.contact .btn{background:var(--teal);border-color:var(--teal);color:var(--navy);white-space:nowrap}
+footer{background:#102238;color:#b8c5d1;padding:20px 0;font-size:.82rem}
+footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:800px){.hero-grid,.about-grid{grid-template-columns:1fr;gap:34px}.hero{padding-top:54px}.hero-art{min-height:360px}.cards{grid-template-columns:1fr}.sample-grid{grid-template-columns:1fr}.job{grid-template-columns:1fr;gap:8px}.metric{padding:0 12px}.metric strong{font-size:.94rem}.metric span{font-size:.76rem}nav{gap:13px}nav a{font-size:.8rem}}
+@media(max-width:560px){.wrap{width:min(100% - 28px,1120px)}.nav{min-height:64px}.menu{display:block}nav{display:none;position:absolute;left:0;right:0;top:64px;background:var(--cream);padding:18px 22px 22px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}nav.open{display:flex}.hero{padding:45px 0}.hero-art{min-height:340px}.art-back{width:260px;height:300px}.art-card{width:280px;padding:22px}.art-icon{height:150px}.float-note{right:0;bottom:5px}.metric-grid{grid-template-columns:1fr;gap:15px;padding:20px 0}.metric,.metric:first-child{padding:0;border:0}.metric strong,.metric span{display:inline}.metric span:before{content:" — "}.metric span{font-size:.84rem}section{padding:62px 0}.contact-panel{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">SHANE<span>.</span> REPOYO</a>
+    <button class="menu" aria-expanded="false" aria-controls="navlinks">Menu ☰</button>
+    <nav id="navlinks" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#approach">Teaching</a><a href="#experience">Experience</a><a href="#resources">Resources</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kicker">Educator · English language learning</div>
+      <h1>Helping young<br>learners <em>find their</em><br>voice.</h1>
+      <p class="lede">I’m Shane Repoyo, an English language educator based in Kobe, Japan. I create supportive, engaging learning experiences that help children build confidence, communication skills, and a love of learning.</p>
+      <div class="actions"><a class="btn primary" href="#experience">Explore my experience ↗</a><a class="btn secondary" href="#contact">Get in touch</a></div>
+    </div>
+    <div class="hero-art" aria-label="Illustration of a book and learning">
+      <div class="art-back"></div>
+      <div class="art-card">
+        <div class="art-icon">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Open book illustration">
+            <path d="M100 58 C76 43 47 46 26 55 L26 143 C51 134 78 137 100 151 Z" fill="#fffdf7" stroke="#315b80" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M100 58 C124 43 153 46 174 55 L174 143 C149 134 122 137 100 151 Z" fill="#ffffff" stroke="#315b80" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M100 59 L100 151" stroke="#315b80" stroke-width="4"/>
+            <path d="M43 77 Q65 70 83 81 M43 94 Q65 87 83 98 M117 81 Q139 70 157 77 M117 98 Q139 87 157 94" stroke="#9bd4c7" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <path d="M53 42 L47 26 M145 42 L153 27 M99 34 L99 17" stroke="#d6a85f" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="30" cy="33" r="5" fill="#d6a85f"/><circle cx="169" cy="34" r="5" fill="#d6a85f"/>
+          </svg>
+        </div>
+        <div class="small">Teaching portfolio</div>
+        <h3>Curiosity first.<br>Confidence always.</h3>
+        <p>Early years · Elementary · English language learning</p>
+      </div>
+      <div class="float-note">Learn · Explore · Grow ✦</div>
+    </div>
+  </div>
+</section>
+<div class="metrics"><div class="wrap metric-grid">
+  <div class="metric"><strong>Early years & elementary</strong><span>Teaching experience</span></div>
+  <div class="metric"><strong>English literacy</strong><span>Phonics, vocabulary, communication</span></div>
+  <div class="metric"><strong>Technology background</strong><span>Creative, adaptable problem-solving</span></div>
+</div></div>
+<section id="about">
+  <div class="wrap about-grid">
+    <div><div class="eyebrow">01 / About me</div><div class="quote">“Every child deserves a classroom where they feel safe enough to try, make mistakes, and grow.”<small>My teaching philosophy</small></div></div>
+    <div class="about-copy">
+      <h2>Learning is more than getting the right answer.</h2>
+      <p>My experience includes teaching kindergarten and elementary learners, supporting English literacy, planning activities, and communicating with families. I aim to make lessons clear, active, and welcoming so that students can participate at their own pace.</p>
+      <p>Alongside education, my background in information technology has strengthened my organization, troubleshooting, and digital skills. I bring that same practical mindset to lesson preparation and classroom support.</p>
+      <div class="pill-row"><span class="pill">Student-centred learning</span><span class="pill">Phonics & literacy</span><span class="pill">Positive routines</span><span class="pill">Family communication</span><span class="pill">Digital skills</span></div>
+    </div>
+  </div>
+</section>
+<section id="approach" style="background:#fff">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">02 / Teaching approach</div><h2>A classroom built for participation.</h2><p class="section-intro">My approach combines structure with play and practice. These are the principles I aim to bring to a learning environment.</p></div>
+    <div class="cards">
+      <article class="card"><div class="card-number">01 — CONNECT</div><h3>Build trust first</h3><p>Use warm greetings, predictable routines, and clear expectations so children understand what to do and feel comfortable joining in.</p></article>
+      <article class="card"><div class="card-number">02 — ENGAGE</div><h3>Make language active</h3><p>Use songs, visuals, movement, games, and short practice cycles to give learners several ways to understand and use new English.</p></article>
+      <article class="card"><div class="card-number">03 — REFLECT</div><h3>Notice every step</h3><p>Observe participation, listen to student responses, and adjust the level of support so learners can practise successfully and grow.</p></article>
+    </div>
+  </div>
+</section>
+<section class="experience" id="experience">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">03 / Professional experience</div><h2>Experience across ages and learning settings.</h2><p class="section-intro">A selection of education roles from my resume.</p></div>
+    <div class="timeline">
+      <article class="job"><div class="job-date">May 2023 – Present</div><div><h3>English Native Teacher</h3><div class="org">Yaruki Switch Group · Kids Duo — Kobe, Japan</div><p>Teach kindergarten learners aged 3–5 and elementary learners aged 6–12 using the company curriculum. Prepare class schedules and seasonal decorations, support advanced English classes, collaborate with colleagues, and communicate around student needs.</p></div></article>
+      <article class="job"><div class="job-date">March 2021 – March 2023</div><div><h3>English Teacher</h3><div class="org">Nova Bilingual Kids — Hyogo, Japan</div><p>Developed lesson plans and activities, supported an English literacy program, and participated in parent–teacher conferences.</p></div></article>
+      <article class="job"><div class="job-date">May 2020 – August 2020</div><div><h3>Part-time English Teacher</h3><div class="org">Bear Academy — Kyoto, Japan</div><p>Prepared lessons and activities, supported pronunciation and introductions, observed student work, and taught learners aged 5–15 as well as adult students.</p></div></article>
+      <article class="job"><div class="job-date">March 2019 – November 2021</div><div><h3>Online English Teacher</h3><div class="org">Bibo Global Opportunity</div><p>Taught English to international learners, focusing on conversation, introductions, pronunciation, and prepared learning materials.</p></div></article>
+      <article class="job"><div class="job-date">December 2018 – December 2019</div><div><h3>Online English Teacher</h3><div class="org">Acadsoc</div><p>Taught children, young adults, and adults, including learners preparing for IELTS and TOEFL.</p></div></article>
+    </div>
+  </div>
+</section>
+<section id="resources">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">04 / Sample resources</div><h2>Small steps. Meaningful practice.</h2><p class="section-intro">These original examples demonstrate how I might structure an English lesson and a simple learner activity. They are portfolio samples, not claims that these exact materials were used in a past class.</p></div>
+    <div class="sample-grid">
+      <article class="lesson">
+        <div class="lesson-top"><div class="label">Sample lesson plan · Ages 6–8</div><h3>Hear it, build it, read it</h3></div>
+        <div class="lesson-body"><p><strong>Focus:</strong> Beginning sounds and simple CVC words.</p><p><strong>Learning goal:</strong> Learners will identify a beginning sound and blend three sounds to read a short word.</p><ul><li><strong>Warm-up (5 min):</strong> Name familiar picture cards and listen for first sounds.</li><li><strong>Model (5 min):</strong> Say each sound slowly, then blend it into a word.</li><li><strong>Guided practice (10 min):</strong> Match picture cards to words with a partner.</li><li><strong>Check-in (5 min):</strong> Learners read one word or point to the matching picture.</li></ul><p><strong>Support:</strong> Picture cues and teacher modelling. <strong>Extension:</strong> Say a sentence using a target word.</p></div>
+      </article>
+      <article class="lesson">
+        <div class="lesson-top alt"><div class="label">Sample learner worksheet</div><h3>Read, match, and try</h3></div>
+        <div class="lesson-body"><p>Say the word aloud. Match it to a picture, then practise writing the missing letter.</p><div class="worksheet"><strong>1. Read these words</strong><div class="word-row"><span class="word">cat</span><span class="word">sun</span><span class="word">map</span></div><strong>2. Add the missing sound</strong><p>c a <span class="blank"></span> &nbsp; s <span class="blank"></span> n &nbsp; m a <span class="blank"></span></p><strong>3. Draw one word you read</strong><div style="height:65px;border:1px solid #dfe5e8;border-radius:10px;margin-top:8px"></div></div><p style="margin-top:15px"><strong>Quick assessment:</strong> Can the learner say the word, identify its sounds, and attempt the missing letter?</p></div>
+      </article>
+    </div>
+    <div class="notice">Portfolio note: Please review all wording and replace or add samples with your own real classroom photos, student work (with permission), or lesson materials before applying.</div>
+  </div>
+</section>
+<section style="background:#fff" id="education">
+  <div class="wrap">
+    <div class="section-head"><div class="eyebrow">05 / Education & skills</div><h2>A combination of teaching and technology.</h2></div>
+    <div class="education-grid">
+      <article class="edu"><div class="eyebrow">Education</div><h3>Bachelor of Science in Information Technology</h3><p>University of Immaculate Conception · Davao City, Philippines<br>June 2007 – March 2012</p></article>
+      <article class="edu"><div class="eyebrow">Language studies</div><h3>Japanese-language studies</h3><p>Kyoto Minsai Japanese Language School · April 2020 – February 2021</p></article>
+      <article class="edu"><div class="eyebrow">Teaching strengths</div><h3>Young learner instruction</h3><p>Lesson and activity preparation, English literacy support, pronunciation, classroom routines, student observation, parent communication.</p></article>
+      <article class="edu"><div class="eyebrow">Additional strengths</div><h3>Digital & technical skills</h3><p>Information technology, web development, CRM tools, office software, graphic design, and practical troubleshooting.</p></article>
+    </div>
+  </div>
+</section>
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--teal)">06 / Contact</div>
+    <h2>Let’s help learners<br>take their next step.</h2>
+    <p class="section-intro">I’m interested in opportunities supporting early years, elementary, and English language learning in an international or bilingual school environment.</p>
+    <div class="contact-panel"><div><p><strong style="color:white">Shane Repoyo</strong></p><p>Based in Kobe, Hyogo, Japan</p><p><a href="mailto:srepoyo@gmail.com" style="color:var(--teal)">srepoyo@gmail.com</a></p></div><a class="btn" href="mailto:srepoyo@gmail.com?subject=Teaching%20Opportunity">Email me ↗</a></div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><span>© <span id="year"></span> Shane Repoyo · Teaching Portfolio</span><span>Built with care for curious learners.</span></div></footer>
+<script>
+const menuButton = document.querySelector('.menu');
+const nav = document.querySelector('#navlinks');
+menuButton.addEventListener('click', () => {
+  const isOpen = nav.classList.toggle('open');
+  menuButton.setAttribute('aria-expanded', String(isOpen));
+});
+nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+  nav.classList.remove('open');
+  menuButton.setAttribute('aria-expanded', 'false');
+}));
+document.querySelector('#year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
