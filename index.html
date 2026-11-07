@@ -5,55 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#172c46">
 <meta name="description" content="Teaching portfolio of Shane Repoyo — English language educator in Kobe, Japan.">
-<head>
-    <title>Shane Repoyo | Teaching Portfolio</title>
-</head>
-
-
+<title>Shane Repoyo | Teaching Portfolio</title>
 
 <style>
 /* Responsive introduction video */
-
-#video-introduction {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 50px 20px;
-    text-align: center;
+#video-introduction{width:100%;box-sizing:border-box;padding:50px 20px;text-align:center}
+#video-introduction video{display:block;width:100%;max-width:380px;height:420px;object-fit:cover;object-position:center;margin:25px auto;border-radius:14px;background:#111}
+@media screen and (max-width:600px){
+  #video-introduction{padding:35px 15px}
+  #video-introduction video{max-width:300px;height:350px}
 }
 
-#video-introduction video {
-    display: block;
-    width: 100%;
-    max-width: 380px;
-    height: 420px;
-    object-fit: cover;
-    object-position: center;
-    margin: 25px auto;
-    border-radius: 14px;
-    background: #111;
-}
-
-/* Mobile screens */
-@media screen and (max-width: 600px) {
-    #video-introduction {
-        padding: 35px 15px;
-    }
-
-    #video-introduction video {
-        max-width: 300px;
-        height: 350px;
-    }
-}
-</style>
-
-
-
-  
-<style>
-:root {
-  --navy:#172c46; --blue:#315b80; --teal:#9bd4c7; --cream:#f7f5ef;
-  --paper:#ffffff; --ink:#1d2936; --muted:#657180; --line:#dfe5e8;
-  --accent:#d6a85f; --radius:22px; --shadow:0 18px 50px rgba(23,44,70,.10);
+:root{
+  --navy:#172c46;--blue:#315b80;--teal:#9bd4c7;--cream:#f7f5ef;
+  --paper:#fff;--ink:#1d2936;--muted:#657180;--line:#dfe5e8;
+  --accent:#d6a85f;--radius:22px;--shadow:0 18px 50px rgba(23,44,70,.10)
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -145,10 +111,35 @@ h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.08;letter-spacing:-.05em;color
 .contact-panel{display:flex;justify-content:space-between;align-items:center;gap:30px;border-top:1px solid #42556c;margin-top:34px;padding-top:28px}
 .contact-panel p{margin:0;color:#d0dbe5}
 .contact .btn{background:var(--teal);border-color:var(--teal);color:var(--navy);white-space:nowrap}
+.contact-links{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:8px}
+.contact-link{display:inline-flex;align-items:center;gap:9px;color:var(--teal);text-decoration:none;font-weight:650;overflow-wrap:anywhere}
+.contact-link:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+.contact-link svg{width:19px;height:19px;flex:0 0 19px;fill:currentColor}
+.contact-link.linkedin{color:#c6e8e0}
 footer{background:#102238;color:#b8c5d1;padding:20px 0;font-size:.82rem}
 footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-@media(max-width:800px){.hero-grid,.about-grid{grid-template-columns:1fr;gap:34px}.hero{padding-top:54px}.hero-art{min-height:360px}.cards{grid-template-columns:1fr}.sample-grid{grid-template-columns:1fr}.job{grid-template-columns:1fr;gap:8px}.metric{padding:0 12px}.metric strong{font-size:.94rem}.metric span{font-size:.76rem}nav{gap:13px}nav a{font-size:.8rem}}
-@media(max-width:560px){.wrap{width:min(100% - 28px,1120px)}.nav{min-height:64px}.menu{display:block}nav{display:none;position:absolute;left:0;right:0;top:64px;background:var(--cream);padding:18px 22px 22px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}nav.open{display:flex}.hero{padding:45px 0}.hero-art{min-height:340px}.art-back{width:260px;height:300px}.art-card{width:280px;padding:22px}.art-icon{height:150px}.float-note{right:0;bottom:5px}.metric-grid{grid-template-columns:1fr;gap:15px;padding:20px 0}.metric,.metric:first-child{padding:0;border:0}.metric strong,.metric span{display:inline}.metric span:before{content:" — "}.metric span{font-size:.84rem}section{padding:62px 0}.contact-panel{align-items:flex-start;flex-direction:column}}
+@media(max-width:800px){
+  .hero-grid,.about-grid{grid-template-columns:1fr;gap:34px}
+  .hero{padding-top:54px}.hero-art{min-height:360px}.cards{grid-template-columns:1fr}
+  .sample-grid{grid-template-columns:1fr}.job{grid-template-columns:1fr;gap:8px}
+  .metric{padding:0 12px}.metric strong{font-size:.94rem}.metric span{font-size:.76rem}
+  nav{gap:13px}nav a{font-size:.8rem}
+}
+@media(max-width:560px){
+  .wrap{width:min(100% - 28px,1120px)}
+  .nav{min-height:64px}.menu{display:block}
+  nav{display:none;position:absolute;left:0;right:0;top:64px;background:var(--cream);padding:18px 22px 22px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}
+  nav.open{display:flex}
+  .hero{padding:45px 0}.hero-art{min-height:340px}.art-back{width:260px;height:300px}
+  .art-card{width:280px;padding:22px}.art-icon{height:150px}
+  .float-note{right:0;bottom:5px}
+  .metric-grid{grid-template-columns:1fr;gap:15px;padding:20px 0}
+  .metric,.metric:first-child{padding:0;border:0}
+  .metric strong,.metric span{display:inline}.metric span:before{content:" — "}
+  .metric span{font-size:.84rem}section{padding:62px 0}
+  .contact-panel{align-items:flex-start;flex-direction:column}
+  .contact-links{align-items:flex-start;flex-direction:column;gap:10px}
+}
 </style>
 </head>
 <body>
@@ -198,8 +189,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
 </div></div>
 <section id="about">
   <div class="wrap about-grid">
-    <div><div class="eyebrow">01 / About me</div><div class="quote">“Every child deserves a classroom where they feel safe enough to try, make mistakes, and grow.”<small>My teaching philosophy</small></div></div>
-
+    <div>
+      <div class="eyebrow">01 / About me</div>
+      <div class="quote">“Every child deserves a classroom where they feel safe enough to try, make mistakes, and grow.”<small>My teaching philosophy</small></div>
+    </div>
+    <div class="about-copy">
       <h2>Learning is more than getting the right answer.</h2>
       <p>My experience includes teaching kindergarten and elementary learners, supporting English literacy, planning activities, and communicating with families. I aim to make lessons clear, active, and welcoming so that students can participate at their own pace.</p>
       <p>Alongside education, my background in information technology has strengthened my organization, troubleshooting, and digital skills. I bring that same practical mindset to lesson preparation and classroom support.</p>
@@ -207,25 +201,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
     </div>
   </div>
 </section>
-
 <section id="video-introduction" class="video-section">
-    <h2>Meet the Teacher</h2>
-    <h3>Shane Repoyo</h3>
-
-    <p>Middle School Teacher | English Language Educator</p>
-
-    <p>
-        Get to know me, my teaching journey,
-        and my passion for helping students learn.
-    </p>
-
-    <video controls playsinline preload="metadata">
-        <source src="BeautyPlus_centered.mp4" type="video/mp4">
-        Your browser does not support video playback.
-    </video>
+  <h2>Meet the Teacher</h2><h3>Shane Repoyo</h3>
+  <p>Middle School Teacher | English Language Educator</p>
+  <p>Get to know me, my teaching journey, and my passion for helping students learn.</p>
+  <video controls playsinline preload="metadata">
+    <source src="BeautyPlus_centered.mp4" type="video/mp4">
+    Your browser does not support video playback.
+  </video>
 </section>
-
-  
 <section id="approach" style="background:#fff">
   <div class="wrap">
     <div class="section-head"><div class="eyebrow">02 / Teaching approach</div><h2>A classroom built for participation.</h2><p class="section-intro">My approach combines structure with play and practice. These are the principles I aim to bring to a learning environment.</p></div>
@@ -261,9 +245,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
         <div class="lesson-body"><p>Say the word aloud. Match it to a picture, then practise writing the missing letter.</p><div class="worksheet"><strong>1. Read these words</strong><div class="word-row"><span class="word">cat</span><span class="word">sun</span><span class="word">map</span></div><strong>2. Add the missing sound</strong><p>c a <span class="blank"></span> &nbsp; s <span class="blank"></span> n &nbsp; m a <span class="blank"></span></p><strong>3. Draw one word you read</strong><div style="height:65px;border:1px solid #dfe5e8;border-radius:10px;margin-top:8px"></div></div><p style="margin-top:15px"><strong>Quick assessment:</strong> Can the learner say the word, identify its sounds, and attempt the missing letter?</p></div>
       </article>
     </div>
-
-
-    
   </div>
 </section>
 <section style="background:#fff" id="education">
@@ -282,7 +263,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
     <div class="eyebrow" style="color:var(--teal)">06 / Contact</div>
     <h2>Let’s help learners<br>take their next step.</h2>
     <p class="section-intro">I’m interested in opportunities supporting early years, elementary, and English language learning in an international or bilingual school environment.</p>
-   <div class="contact-panel">
+    <div class="contact-panel">
       <div>
         <p><strong style="color:white">Shane Repoyo</strong></p>
         <p>Based in Kobe, Hyogo, Japan</p>
@@ -302,20 +283,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
   </div>
 </section>
 </main>
-
 <footer><div class="wrap"><span>© <span id="year"></span> Shane Repoyo · Teaching Portfolio</span><span>Built with care for curious learners.</span></div></footer>
 <script>
-const menuButton = document.querySelector('.menu');
-const nav = document.querySelector('#navlinks');
-menuButton.addEventListener('click', () => {
-  const isOpen = nav.classList.toggle('open');
-  menuButton.setAttribute('aria-expanded', String(isOpen));
+const menuButton=document.querySelector('.menu');
+const nav=document.querySelector('#navlinks');
+menuButton.addEventListener('click',()=>{
+  const isOpen=nav.classList.toggle('open');
+  menuButton.setAttribute('aria-expanded',String(isOpen));
 });
-nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
   nav.classList.remove('open');
-  menuButton.setAttribute('aria-expanded', 'false');
+  menuButton.setAttribute('aria-expanded','false');
 }));
-document.querySelector('#year').textContent = new Date().getFullYear();
+document.querySelector('#year').textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
