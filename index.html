@@ -140,6 +140,100 @@ footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
   .contact-panel{align-items:flex-start;flex-direction:column}
   .contact-links{align-items:flex-start;flex-direction:column;gap:10px}
 }
+
+  /* Professional achievements and documents */
+
+.achievement-grid,
+.document-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.achievement-card,
+.document-card {
+  background:white;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:28px;
+  transition:transform .25s,box-shadow .25s;
+}
+
+.achievement-card:hover,
+.document-card:hover {
+  transform:translateY(-5px);
+  box-shadow:var(--shadow);
+}
+
+.achievement-icon,
+.document-icon {
+  width:52px;
+  height:52px;
+  display:grid;
+  place-items:center;
+  background:#e7eeec;
+  color:var(--blue);
+  border-radius:15px;
+  font-size:1.5rem;
+  margin-bottom:20px;
+}
+
+.achievement-card h3,
+.document-card h3 {
+  color:var(--navy);
+  margin-bottom:10px;
+  font-size:1.15rem;
+}
+
+.achievement-card p,
+.document-card p {
+  color:var(--muted);
+  font-size:.94rem;
+}
+
+.document-card .document-actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:20px;
+}
+
+.document-actions a {
+  text-decoration:none;
+  font-size:.84rem;
+  font-weight:750;
+  color:var(--blue);
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:9px 14px;
+}
+
+.document-actions a:hover {
+  background:var(--navy);
+  color:white;
+  border-color:var(--navy);
+}
+
+.document-tag {
+  display:inline-block;
+  background:#f5e7cc;
+  color:#795b2f;
+  border-radius:999px;
+  padding:5px 11px;
+  font-size:.72rem;
+  font-weight:800;
+  margin-bottom:12px;
+}
+
+@media(max-width:800px) {
+  .achievement-grid,
+  .document-grid {
+    grid-template-columns:1fr;
+  }
+}
+
+
+  
 </style>
 </head>
 <body>
@@ -147,9 +241,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
   <div class="wrap nav">
     <a class="brand" href="#home">SHEELA "SHANE"<span>.</span> REPOYO</a>
     <button class="menu" aria-expanded="false" aria-controls="navlinks">Menu ☰</button>
-    <nav id="navlinks" aria-label="Main navigation">
-      <a href="#about">About</a><a href="#approach">Teaching</a><a href="#experience">Experience</a><a href="#resources">Resources</a><a href="#contact">Contact</a>
-    </nav>
+   <nav id="navlinks" aria-label="Main navigation">
+  <a href="#about">About</a>
+  <a href="#approach">Teaching</a>
+  <a href="#experience">Experience</a>
+  <a href="#achievements">Achievements</a>
+  <a href="#resources">Resources</a>
+  <a href="#documents">Documents</a>
+  <a href="#contact">Contact</a>
+</nav>
   </div>
 </header>
 <main>
@@ -159,8 +259,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
       <div class="kicker">Educator · English language learning</div>
       <h1>Helping young<br>learners <em>find their</em><br>voice.</h1>
       <p class="lede">I’m Shane Repoyo, an English language educator based in Kobe, Japan. I create supportive, engaging learning experiences that help children build confidence, communication skills, and a love of learning.</p>
-      <div class="actions"><a class="btn primary" href="#experience">Explore my experience ↗</a><a class="btn secondary" href="#contact">Get in touch</a></div>
-    </div>
+     <div class="actions">
+  <a class="btn primary" href="#experience">
+    Explore my experience ↗
+  </a>
+
+  <a class="btn secondary"
+     href="assets/documents/Shane_Repoyo_CV.pdf" download>
+    ↓ Download My CV
+  </a>
+
+  <a class="btn secondary" href="#contact">
+    Get in touch
+  </a>
+</div>
     <div class="hero-art" aria-label="Illustration of a book and learning">
       <div class="art-back"></div>
       <div class="art-card">
@@ -232,6 +344,95 @@ footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
     </div>
   </div>
 </section>
+
+  <section id="achievements" style="background:#fff">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">04 / Professional achievements</div>
+
+      <h2>Making an impact beyond the classroom.</h2>
+
+      <p class="section-intro">
+        Highlights of my teaching experience, classroom
+        contributions, event participation, and professional
+        development.
+      </p>
+    </div>
+
+    <div class="achievement-grid">
+
+      <article class="achievement-card">
+        <div class="achievement-icon">🏆</div>
+        <div class="card-number">01 — LEADERSHIP</div>
+        <h3>Regional Spelling Bee Competition</h3>
+        <p>
+          Served as an emcee for the Yaruki Switch Group
+          Regional Spelling Bee Competition, supporting
+          the Bronze and Silver Challenger categories.
+        </p>
+      </article>
+
+      <article class="achievement-card">
+        <div class="achievement-icon">🎨</div>
+        <div class="card-number">02 — EVENT COORDINATION</div>
+        <h3>School Events & Seasonal Activities</h3>
+        <p>
+          Contributed to seasonal school activities,
+          classroom decorations, themed events, and
+          engaging experiences for young learners.
+        </p>
+      </article>
+
+      <article class="achievement-card">
+        <div class="achievement-icon">📚</div>
+        <div class="card-number">03 — TEACHING EXPERIENCE</div>
+        <h3>Early Years & Elementary Education</h3>
+        <p>
+          Experienced in teaching kindergarten learners
+          aged 3–5 and elementary students aged 6–12,
+          including advanced English classes.
+        </p>
+      </article>
+
+      <article class="achievement-card">
+        <div class="achievement-icon">💡</div>
+        <div class="card-number">04 — LESSON DEVELOPMENT</div>
+        <h3>English Literacy Development</h3>
+        <p>
+          Developed English lesson plans, learning
+          activities, and literacy-focused programs
+          to support student communication and learning.
+        </p>
+      </article>
+
+      <article class="achievement-card">
+        <div class="achievement-icon">🤝</div>
+        <div class="card-number">05 — COMMUNICATION</div>
+        <h3>Parent & Team Collaboration</h3>
+        <p>
+          Worked with colleagues and families to discuss
+          student progress, address learning needs,
+          and support positive learning environments.
+        </p>
+      </article>
+
+      <article class="achievement-card">
+        <div class="achievement-icon">💻</div>
+        <div class="card-number">06 — TECHNOLOGY</div>
+        <h3>Technology-Enhanced Learning</h3>
+        <p>
+          Applied an Information Technology background
+          to digital resources, educational materials,
+          creative design, and technical problem-solving.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+  
 <section id="resources">
   <div class="wrap">
     <div class="section-head"><div class="eyebrow">04 / Sample resources</div><h2>Small steps. Meaningful practice.</h2><p class="section-intro">These original examples demonstrate how I might structure an English lesson and a simple learner activity. They are portfolio samples, not claims that these exact materials were used in a past class.</p></div>
@@ -258,6 +459,112 @@ footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
     </div>
   </div>
 </section>
+
+<section id="documents">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">07 / Professional documents</div>
+
+      <h2>My qualifications & credentials.</h2>
+
+      <p class="section-intro">
+        Explore my professional background, teaching
+        qualifications, and educational credentials.
+        Documents are available for review and download.
+      </p>
+    </div>
+
+    <div class="document-grid">
+
+      <!-- CV -->
+      <article class="document-card">
+        <div class="document-icon">📄</div>
+
+        <span class="document-tag">CURRICULUM VITAE</span>
+
+        <h3>Professional Resume</h3>
+
+        <p>
+          Explore my teaching experience, professional
+          background, technical skills, and education.
+        </p>
+
+        <div class="document-actions">
+          <a href="assets/documents/Shane_Repoyo_CV.pdf"
+             target="_blank"
+             rel="noopener noreferrer">
+            View CV ↗
+          </a>
+
+          <a href="assets/documents/Shane_Repoyo_CV.pdf" download>
+            Download ↓
+          </a>
+        </div>
+      </article>
+
+      <!-- TEFL -->
+      <article class="document-card">
+        <div class="document-icon">🎓</div>
+
+        <span class="document-tag">TEACHING QUALIFICATION</span>
+
+        <h3>TEFL Certificate</h3>
+
+        <p>
+          Teaching English as a Foreign Language.
+          Alison Online Course, completed August 15, 2025.
+        </p>
+
+        <div class="document-actions">
+         <a href="assets/documents/Shane_Repoyo_TEFL_Certificate.pdf" target="_blank">
+            View Certificate ↗
+          </a>
+
+          <a href="assets/documents/Shane_Repoyo_TEFL_Certificate.pdf"
+             download>
+            Download ↓
+          </a>
+
+          <a href="https://alison.com/verify/0dfd8676ad"
+             target="_blank"
+             rel="noopener noreferrer">
+            Verify ↗
+          </a>
+        </div>
+      </article>
+
+      <!-- DEGREE -->
+      <article class="document-card">
+        <div class="document-icon">💻</div>
+
+        <span class="document-tag">EDUCATION</span>
+
+        <h3>Bachelor of Science in Information Technology</h3>
+
+        <p>
+          University of Immaculate Conception,
+          Davao City, Philippines.
+        </p>
+
+        <div class="document-actions">
+          <a href="mailto:srepoyo@gmail.com?subject=Request%20for%20Education%20Credentials">
+            Request Document ↗
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="notice">
+      Additional educational and professional training
+      documents can be provided upon request.
+    </div>
+
+  </div>
+</section>
+
+  
 <section class="contact" id="contact">
   <div class="wrap">
     <div class="eyebrow" style="color:var(--teal)">06 / Contact</div>
