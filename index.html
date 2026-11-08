@@ -9,6 +9,25 @@
 
 <style>
 
+
+/* Tablet layout improvements */
+@media (min-width: 561px) and (max-width: 800px) {
+  .achievement-grid,
+  .document-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Keep cards comfortable on smaller phones */
+@media (max-width: 560px) {
+  .achievement-grid,
+  .document-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+  
   /* Professional achievements and documents */
 
 .achievement-grid,
@@ -242,7 +261,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
 <body>
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#home">SHEELA "SHANE"<span>.</span> REPOYO</a>
+    <a class="brand" href="#home">SHANE<span>.</span> REPOYO</a>
     <button class="menu" aria-expanded="false" aria-controls="navlinks">Menu ☰</button>
    <nav id="navlinks" aria-label="Main navigation">
   <a href="#about">About</a>
@@ -310,8 +329,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
 </section>
 <section id="video-introduction" class="video-section">
   <h2>Meet the Teacher</h2><h3>Shane Repoyo</h3>
-  <p>Middle School Teacher | English Language Educator</p>
-  <p>Get to know me, my teaching journey, and my passion for helping students learn.</p>
+ <p>English Language Educator | Early Years & Elementary</p>
+<p>Get to know me, my teaching journey, and my passion for helping young learners develop confidence in English.</p>
   <video controls playsinline preload="metadata">
     <source src="BeautyPlus_centered.mp4" type="video/mp4">
     Your browser does not support video playback.
@@ -331,7 +350,27 @@ footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
   <div class="wrap">
     <div class="section-head"><div class="eyebrow">03 / Professional experience</div><h2>Experience across ages and learning settings.</h2><p class="section-intro">A selection of education roles from my resume.</p></div>
     <div class="timeline">
-      <article class="job"><div class="job-date">May 2023 – Present</div><div><h3>English Native Teacher</h3><div class="org">Yaruki Switch Group · Kids Duo — Kobe, Japan</div><p>Teach kindergarten learners aged 3–5 and elementary learners aged 6–12 using the company curriculum. Prepare class schedules and seasonal decorations, support advanced English classes, collaborate with colleagues, and communicate around student needs.</p></div></article>
+    
+<article class="job">
+  <div class="job-date">May 2023 – Present</div>
+  <div>
+    <h3>Middle Teacher | English Language Educator</h3>
+    <div class="org">Yaruki Switch Group · Kids Duo — Kobe, Japan</div>
+    <p>
+      Support kindergarten learners aged 3–5 and elementary
+      students aged 6–12 through engaging English-language
+      instruction and structured learning activities.
+    </p>
+    <ul>
+      <li>Prepare and facilitate English lessons using the company curriculum.</li>
+      <li>Support phonics, vocabulary, reading, speaking, and communication development.</li>
+      <li>Assist with classroom management, daily routines, and student engagement.</li>
+      <li>Contribute to seasonal events, school activities, and special programs.</li>
+      <li>Collaborate with teaching colleagues and support individual student needs.</li>
+    </ul>
+  </div>
+</article>
+
       <article class="job"><div class="job-date">March 2021 – March 2023</div><div><h3>English Teacher</h3><div class="org">Nova Bilingual Kids — Hyogo, Japan</div><p>Developed lesson plans and activities, supported an English literacy program, and participated in parent–teacher conferences.</p></div></article>
       <article class="job"><div class="job-date">May 2020 – August 2020</div><div><h3>Part-time English Teacher</h3><div class="org">Bear Academy — Kyoto, Japan</div><p>Prepared lessons and activities, supported pronunciation and introductions, observed student work, and taught learners aged 5–15 as well as adult students.</p></div></article>
       <article class="job"><div class="job-date">March 2019 – November 2021</div><div><h3>Online English Teacher</h3><div class="org">Bibo Global Opportunity</div><p>Taught English to international learners, focusing on conversation, introductions, pronunciation, and prepared learning materials.</p></div></article>
@@ -430,7 +469,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
   
 <section id="resources">
   <div class="wrap">
-    <div class="section-head"><div class="eyebrow">04 / Sample resources</div><h2>Small steps. Meaningful practice.</h2><p class="section-intro">These original examples demonstrate how I might structure an English lesson and a simple learner activity. They are portfolio samples, not claims that these exact materials were used in a past class.</p></div>
+    <div class="section-head"><div class="eyebrow">05 / Sample resources</div><h2>Small steps. Meaningful practice.</h2><p class="section-intro">These original examples demonstrate how I might structure an English lesson and a simple learner activity. They are portfolio samples, not claims that these exact materials were used in a past class.</p></div>
     <div class="sample-grid">
       <article class="lesson">
         <div class="lesson-top"><div class="label">Sample lesson plan · Ages 6–8</div><h3>Hear it, build it, read it</h3></div>
@@ -445,7 +484,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
 </section>
 <section style="background:#fff" id="education">
   <div class="wrap">
-    <div class="section-head"><div class="eyebrow">05 / Education & skills</div><h2>A combination of teaching and technology.</h2></div>
+    <div class="section-head"><div class="eyebrow">06 / Education & skills</div><h2>A combination of teaching and technology.</h2></div>
     <div class="education-grid">
       <article class="edu"><div class="eyebrow">Education</div><h3>Bachelor of Science in Information Technology</h3><p>University of Immaculate Conception · Davao City, Philippines<br>June 2007 – March 2012</p></article>
       <article class="edu"><div class="eyebrow">Language studies</div><h3>Japanese-language studies</h3><p>Kyoto Minsai Japanese Language School · April 2020 – February 2021</p></article>
@@ -562,7 +601,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
   
 <section class="contact" id="contact">
   <div class="wrap">
-    <div class="eyebrow" style="color:var(--teal)">06 / Contact</div>
+    <div class="eyebrow" style="color:var(--teal)">08 / Contact</div>
     <h2>Let’s help learners<br>take their next step.</h2>
     <p class="section-intro">I’m interested in opportunities supporting early years, elementary, and English language learning in an international or bilingual school environment.</p>
     <div class="contact-panel">
