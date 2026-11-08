@@ -238,8 +238,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
 }
 
 
-
-
   
 </style>
 </head>
@@ -266,20 +264,100 @@ footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
       <div class="kicker">Educator · English language learning</div>
       <h1>Helping young<br>learners <em>find their</em><br>voice.</h1>
       <p class="lede">I’m Shane Repoyo, an English language educator based in Kobe, Japan. I create supportive, engaging learning experiences that help children build confidence, communication skills, and a love of learning.</p>
-     <div class="actions">
-  <a class="btn primary" href="#experience">
-    Explore my experience ↗
-  </a>
+    
+    /* Professional achievements and documents */
 
-  <a class="btn secondary"
-     href="assets/documents/Shane_Repoyo_CV.pdf.pdf" download>
-    ↓ Download My CV
-  </a>
+.achievement-grid,
+.document-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
 
-  <a class="btn secondary" href="#contact">
-    Get in touch
-  </a>
-</div>
+.achievement-card,
+.document-card {
+  background:white;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:28px;
+  transition:transform .25s,box-shadow .25s;
+}
+
+.achievement-card:hover,
+.document-card:hover {
+  transform:translateY(-5px);
+  box-shadow:var(--shadow);
+}
+
+.achievement-icon,
+.document-icon {
+  width:52px;
+  height:52px;
+  display:grid;
+  place-items:center;
+  background:#e7eeec;
+  color:var(--blue);
+  border-radius:15px;
+  font-size:1.5rem;
+  margin-bottom:20px;
+}
+
+.achievement-card h3,
+.document-card h3 {
+  color:var(--navy);
+  margin-bottom:10px;
+  font-size:1.15rem;
+}
+
+.achievement-card p,
+.document-card p {
+  color:var(--muted);
+  font-size:.94rem;
+}
+
+.document-card .document-actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:20px;
+}
+
+.document-actions a {
+  text-decoration:none;
+  font-size:.84rem;
+  font-weight:750;
+  color:var(--blue);
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:9px 14px;
+}
+
+.document-actions a:hover {
+  background:var(--navy);
+  color:white;
+  border-color:var(--navy);
+}
+
+.document-tag {
+  display:inline-block;
+  background:#f5e7cc;
+  color:#795b2f;
+  border-radius:999px;
+  padding:5px 11px;
+  font-size:.72rem;
+  font-weight:800;
+  margin-bottom:12px;
+}
+
+@media(max-width:800px) {
+  .achievement-grid,
+  .document-grid {
+    grid-template-columns:1fr;
+  }
+}
+
+
+</div></br>
     <div class="hero-art" aria-label="Illustration of a book and learning">
       <div class="art-back"></div>
       <div class="art-card">
@@ -293,6 +371,24 @@ footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
             <circle cx="30" cy="33" r="5" fill="#d6a85f"/><circle cx="169" cy="34" r="5" fill="#d6a85f"/>
           </svg>
         </div>
+
+<div class="actions">
+  <a class="btn primary" href="#experience">
+    Explore my experience ↗
+  </a>
+
+  <a class="btn secondary"
+     href="assets/Shane_Repoyo_CV.pdf"
+     download>
+    ↓ Download My CV
+  </a>
+
+  <a class="btn secondary" href="#contact">
+    Get in touch
+  </a>
+</div>
+
+        
         <div class="small">Teaching portfolio</div>
         <h3>Curiosity first.<br>Confidence always.</h3>
         <p>Early years · Elementary · English language learning</p>
@@ -301,6 +397,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
     </div>
   </div>
 </section>
+
+
+
+
+  
+  
 <div class="metrics"><div class="wrap metric-grid">
   <div class="metric"><strong>Early years & elementary</strong><span>Teaching experience</span></div>
   <div class="metric"><strong>English literacy</strong><span>Phonics, vocabulary, communication</span></div>
