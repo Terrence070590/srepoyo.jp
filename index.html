@@ -8,6 +8,102 @@
 <title>Shane Repoyo | Teaching Portfolio</title>
 
 <style>
+
+  /* Professional achievements and documents */
+
+.achievement-grid,
+.document-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.achievement-card,
+.document-card {
+  background:white;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:28px;
+  transition:transform .25s,box-shadow .25s;
+}
+
+.achievement-card:hover,
+.document-card:hover {
+  transform:translateY(-5px);
+  box-shadow:var(--shadow);
+}
+
+.achievement-icon,
+.document-icon {
+  width:52px;
+  height:52px;
+  display:grid;
+  place-items:center;
+  background:#e7eeec;
+  color:var(--blue);
+  border-radius:15px;
+  font-size:1.5rem;
+  margin-bottom:20px;
+}
+
+.achievement-card h3,
+.document-card h3 {
+  color:var(--navy);
+  margin-bottom:10px;
+  font-size:1.15rem;
+}
+
+.achievement-card p,
+.document-card p {
+  color:var(--muted);
+  font-size:.94rem;
+}
+
+.document-card .document-actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:20px;
+}
+
+.document-actions a {
+  text-decoration:none;
+  font-size:.84rem;
+  font-weight:750;
+  color:var(--blue);
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:9px 14px;
+}
+
+.document-actions a:hover {
+  background:var(--navy);
+  color:white;
+  border-color:var(--navy);
+}
+
+.document-tag {
+  display:inline-block;
+  background:#f5e7cc;
+  color:#795b2f;
+  border-radius:999px;
+  padding:5px 11px;
+  font-size:.72rem;
+  font-weight:800;
+  margin-bottom:12px;
+}
+
+@media(max-width:800px) {
+  .achievement-grid,
+  .document-grid {
+    grid-template-columns:1fr;
+  }
+}
+
+
+
+
+  
 /* Responsive introduction video */
 #video-introduction{width:100%;box-sizing:border-box;padding:50px 20px;text-align:center}
 #video-introduction video{display:block;width:100%;max-width:380px;height:420px;object-fit:cover;object-position:center;margin:25px auto;border-radius:14px;background:#111}
@@ -141,96 +237,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
   .contact-links{align-items:flex-start;flex-direction:column;gap:10px}
 }
 
-  /* Professional achievements and documents */
 
-.achievement-grid,
-.document-grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-
-.achievement-card,
-.document-card {
-  background:white;
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  padding:28px;
-  transition:transform .25s,box-shadow .25s;
-}
-
-.achievement-card:hover,
-.document-card:hover {
-  transform:translateY(-5px);
-  box-shadow:var(--shadow);
-}
-
-.achievement-icon,
-.document-icon {
-  width:52px;
-  height:52px;
-  display:grid;
-  place-items:center;
-  background:#e7eeec;
-  color:var(--blue);
-  border-radius:15px;
-  font-size:1.5rem;
-  margin-bottom:20px;
-}
-
-.achievement-card h3,
-.document-card h3 {
-  color:var(--navy);
-  margin-bottom:10px;
-  font-size:1.15rem;
-}
-
-.achievement-card p,
-.document-card p {
-  color:var(--muted);
-  font-size:.94rem;
-}
-
-.document-card .document-actions {
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-top:20px;
-}
-
-.document-actions a {
-  text-decoration:none;
-  font-size:.84rem;
-  font-weight:750;
-  color:var(--blue);
-  border:1px solid var(--line);
-  border-radius:999px;
-  padding:9px 14px;
-}
-
-.document-actions a:hover {
-  background:var(--navy);
-  color:white;
-  border-color:var(--navy);
-}
-
-.document-tag {
-  display:inline-block;
-  background:#f5e7cc;
-  color:#795b2f;
-  border-radius:999px;
-  padding:5px 11px;
-  font-size:.72rem;
-  font-weight:800;
-  margin-bottom:12px;
-}
-
-@media(max-width:800px) {
-  .achievement-grid,
-  .document-grid {
-    grid-template-columns:1fr;
-  }
-}
 
 
   
